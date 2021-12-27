@@ -2,7 +2,7 @@
 
 #### 介绍
 超影是一款免费的，开源的高品质的OCR服务智能办公工具软件，支持离线版，联网版，以及内网版，可以批量进行图片和PDF文档转文字，支持简体中文和英文。
-![Image text](https://gitee.com/zuiyuewentian/local_-ocr_-manager/blob/master/chaoyin.png)
+![Image text](https://gitee.com/zuiyuewentian/local_-ocr_-manager/raw/master/chaoyin.png)
 
 #### 官方平台
 官网：[http://www.dongrufeng.com/](http://www.dongrufeng.com/)
