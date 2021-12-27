@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F735439-ACBB-48B8-9199-84E209EA4377}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Drf_OCR_Manager_UI</RootNamespace>
+    <AssemblyName>超影-智能办公</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Platform.NetStandard, Version=4.5.3.4721, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emgu.CV.4.5.3.4721\lib\netstandard2.0\Emgu.CV.Platform.NetStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PDFLibNet32, Version=1.0.7.0, Culture=neutral, PublicKeyToken=edb8ba7a3bfbfbcc, processorArchitecture=x86">
+      <HintPath>..\packages\PdfLibNet.PieroViano.1.0.0.10\lib\net40\PDFLibNet32.dll</HintPath>
+    </Reference>
+    <Reference Include="PDFLibNet64, Version=1.0.7.0, Culture=neutral, PublicKeyToken=edb8ba7a3bfbfbcc, processorArchitecture=AMD64">
+      <HintPath>..\packages\PdfLibNet.PieroViano.1.0.0.10\lib\net40\PDFLibNet64.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfLibNetLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=edb8ba7a3bfbfbcc, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfLibNet.PieroViano.1.0.0.10\lib\net40\PdfLibNetLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatchOCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchOCR.designer.cs">
+      <DependentUpon>BatchOCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckSysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckSysForm.Designer.cs">
+      <DependentUpon>CheckSysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AESHelper.cs" />
+    <Compile Include="Common\CheckUserHelper.cs" />
+    <Compile Include="Common\ConfigHelper.cs" />
+    <Compile Include="Common\CutPdfHelper.cs" />
+    <Compile Include="Common\DESHelper.cs" />
+    <Compile Include="Common\DirectoryHelper.cs" />
+    <Compile Include="Common\GetComputerUUID.cs" />
+    <Compile Include="Common\HotKey.cs" />
+    <Compile Include="Common\log4netHelper.cs" />
+    <Compile Include="Common\NetTimeHelper.cs" />
+    <Compile Include="Common\ProcessDetector.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ConfigModel.cs" />
+    <Compile Include="Model\TestDemoModel.cs" />
+    <Compile Include="Model\UserInfoModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenBody.designer.cs">
+      <DependentUpon>ScreenBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\about.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\BatchImageOCR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\BatchImageOCR.Designer.cs">
+      <DependentUpon>BatchImageOCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\BatchPDFOCR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\BatchPDFOCR.Designer.cs">
+      <DependentUpon>BatchPDFOCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\Config.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\ErrorInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\ErrorInfo.Designer.cs">
+      <DependentUpon>ErrorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\Flow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\Flow.Designer.cs">
+      <DependentUpon>Flow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\ImageOCR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\ImageOCR.Designer.cs">
+      <DependentUpon>ImageOCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\NumInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\NumInfo.Designer.cs">
+      <DependentUpon>NumInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\PdfNumInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\PdfNumInfo.Designer.cs">
+      <DependentUpon>PdfNumInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\PDFOCR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\PDFOCR.Designer.cs">
+      <DependentUpon>PDFOCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\register.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\register_text.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\register_text.Designer.cs">
+      <DependentUpon>register_text.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\version_select.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\version_select.Designer.cs">
+      <DependentUpon>version_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysControls\Waiting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysControls\Waiting.Designer.cs">
+      <DependentUpon>Waiting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BatchOCR.resx">
+      <DependentUpon>BatchOCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckSysForm.resx">
+      <DependentUpon>CheckSysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenBody.resx">
+      <DependentUpon>ScreenBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\BatchImageOCR.resx">
+      <DependentUpon>BatchImageOCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\BatchPDFOCR.resx">
+      <DependentUpon>BatchPDFOCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\ErrorInfo.resx">
+      <DependentUpon>ErrorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\Flow.resx">
+      <DependentUpon>Flow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\ImageOCR.resx">
+      <DependentUpon>ImageOCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\NumInfo.resx">
+      <DependentUpon>NumInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\PdfNumInfo.resx">
+      <DependentUpon>PdfNumInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\PDFOCR.resx">
+      <DependentUpon>PDFOCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\register_text.resx">
+      <DependentUpon>register_text.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\version_select.resx">
+      <DependentUpon>version_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysControls\Waiting.resx">
+      <DependentUpon>Waiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\sharpicons_badge-9.png" />
+    <None Include="Resources\勾.png" />
+    <None Include="Resources\签到 %281%29.png" />
+    <None Include="Resources\erweima.png" />
+    <None Include="Resources\prompt-filling.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\通知.png" />
+    <None Include="Resources\上传.png" />
+    <None Include="Resources\点 %283%29.png" />
+    <None Include="Resources\点 %282%29.png" />
+    <None Include="Resources\点.png" />
+    <None Include="Resources\点 %281%29.png" />
+    <None Include="Resources\文件类型-链接.png" />
+    <None Include="Resources\文件类型-数据库2.png" />
+    <None Include="Resources\PDF %282%29.png" />
+    <None Include="Resources\jpg-1.png" />
+    <None Include="Resources\图片JPG.png" />
+    <None Include="Resources\文件类型-Pdf.png" />
+    <None Include="Resources\文件类型-配置文件.png" />
+    <None Include="Resources\文件类型-图片.png" />
+    <None Include="Resources\我-关于公司.png" />
+    <None Include="Resources\设置.png" />
+    <None Include="Resources\文件.png" />
+    <None Include="Resources\file文件.png" />
+    <None Include="Resources\多图.png" />
+    <None Include="Resources\图片.png" />
+    <None Include="Resources\pdf %281%29.png" />
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OcrLiteLib\OcrLiteLib.csproj">
+      <Project>{3a1647da-83cd-4f9d-9ffa-f663bb55ff6a}</Project>
+      <Name>OcrLiteLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Tnelab.MiniblinkCore.1.0.6\build\Tnelab.MiniblinkCore.targets" Condition="Exists('..\packages\Tnelab.MiniblinkCore.1.0.6\build\Tnelab.MiniblinkCore.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Tnelab.MiniblinkCore.1.0.6\build\Tnelab.MiniblinkCore.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tnelab.MiniblinkCore.1.0.6\build\Tnelab.MiniblinkCore.targets'))" />
+  </Target>
+</Project>
