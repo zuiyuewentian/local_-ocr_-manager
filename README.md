@@ -1,37 +1,16 @@
-# Local_OCR_Manager
+# 超影-批量化OCR办公软件
 
 #### 介绍
 超影是一款免费的，开源的高品质的OCR服务智能办公工具软件，支持离线版，联网版，以及内网版，可以批量进行图片和PDF文档转文字，支持简体中文和英文。
+![Image text](https://gitee.com/zuiyuewentian/local_-ocr_-manager/blob/master/chaoyin.png)
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+#### 官方平台
+官网：[http://www.dongrufeng.com/](http://www.dongrufeng.com/)
+QQ群：586706808 
 
 
-#### 特技
+#### 教程
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  请先检测您下载的版本，如果是个人离线版，无法运行在win10以下的系统
+2.  检测是否安装了.NET FrameWord 4.6.1版本 点击下载
+3.  如果确认电脑是win10，x64位系统，运行时报错初始化异常等，则请先安装 VC_redist.x64.exe
